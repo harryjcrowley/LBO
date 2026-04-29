@@ -22,7 +22,7 @@ if uploaded_file is not None:
                     'LineItemName'])
     new['FirstSubmitted']=new['FirstSubmitted'].str[0:10]
     ordered=new[['FirstSubmitted', 'SubmittedOnBehalfOf', 'Title', 'RequestedAmount', 'AdjustedAmount']]
-    to_add=st.text_input('Date of committee meeting (MM/DD/YYYY' ): ')
+    to_add=st.text_input('Date of committee meeting (MM/DD/YYYY): ')
     if len(to_add)==10:
         num=len(ordered)
         dates=[]
