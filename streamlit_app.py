@@ -3,7 +3,7 @@ import openpyxl
 
 st.title("LBO Converter Tool")
 st.divider()
-uploaded_file = st.file_uploader("Upload engage file:")
+uploaded_file = st.file_uploader("Upload engage file:", type=".csv")
 if uploaded_file is not None:
     to_add=None
     import pandas as pd
