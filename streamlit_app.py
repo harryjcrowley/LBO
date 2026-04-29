@@ -23,7 +23,6 @@ if uploaded_file is not None:
     new['FirstSubmitted']=new['FirstSubmitted'].str[0:10]
     ordered=new[['FirstSubmitted', 'SubmittedOnBehalfOf', 'Title', 'RequestedAmount', 'AdjustedAmount']]
     to_add=st.text_input('Date of committee meeting (MM/DD/YYYY): ')
-    st.help("This will be added to the 'FC Meeting Date' column in excel.")
     if len(to_add)==10:
         num=len(ordered)
         dates=[]
