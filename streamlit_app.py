@@ -29,5 +29,5 @@ if uploaded_file is not None:
         for f in range(num):
             dates.append(to_add)
         ordered['FC Date']=dates
-        st.table(ordered, width="content", height="content", hide_index="true")   
+        st.table(ordered, width="content", height="content", hide_index=True)   
 st.badge("v1.0 | Created by Harry Crowley", color='blue')
