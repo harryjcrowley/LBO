@@ -29,15 +29,5 @@ if uploaded_file is not None:
         for f in range(num):
             dates.append(to_add)
         ordered['FC Date']=dates
-        from io import BytesIO
-        buffer = BytesIO()
-        ordered.to_excel(buffer, sheet_name='Data', index=False)
-        buffer.seek(0)
-
-        st.download_button(
-            label="Download data as excel file",
-            data=buffer.getvalue(),
-            file_name='formatted.xlsx',
-            mime='text/csv',)
-    
+        st.table(ordered)   
 st.badge("v1.0 | Created by Harry Crowley", color='blue')
